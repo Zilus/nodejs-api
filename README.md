@@ -12,7 +12,7 @@ Esta api se construyo utilizando:
 Descargar el repositorio, entrar al directorio en donde este instalado y ejecutar:
 
 ```sh
-$ npm install
+$ yarn install
 $ brew install mongodb
 $ brew cask install robo-3t
 ```
