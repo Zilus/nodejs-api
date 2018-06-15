@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "description": "Implementar el API que se conforme con la siguiente especificación que se encuentra en el formato Open API v3.0 ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zilus/nodejs-api.git"
+  },
+  "author": "Oscar Azpeitia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zilus/nodejs-api/issues"
+  },
+  "homepage": "https://github.com/Zilus/nodejs-api#readme"
+}
