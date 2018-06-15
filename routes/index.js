@@ -56,7 +56,7 @@ module.exports = function(server) {
 	 * GET
 	 */
 	server.get('/pets/:pet_id', (req, res, next) => {
-		Todo.findOne({ _id: req.params.pet_id }, function(err, doc) {
+		Pet.findOne({ _id: req.params.pet_id }, function(err, doc) {
 			if (err) {
 				console.error(err);
 				return next(
