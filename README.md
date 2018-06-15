@@ -27,3 +27,7 @@ Dentro del interprete, escribimos:
 > use api
 
 > exit
+
+$ npm install -g nodemon
+
+$ nodemon
