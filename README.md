@@ -60,3 +60,32 @@ $ nodemon
 
 # Postman
 
+Descargar Postman:
+[Sitio oficial](https://www.getpostman.com/app/download/osx64)
+
+# Rutas
+GET /pets
+GET /pets/:id
+
+POST /pets (nueva mascota)
+```json
+{
+	"name": "Tatemon",
+	"tag": "Algo aqui"
+}
+```
+
+
+### No estaba en el ejercicio pero tambien funciona:
+
+PUT /pets/:pet_id 
+
+```json
+{
+	"name": "Nuevo nombre",
+	"tag": "Cambio de tag"
+}
+```
+
+DELETE /pets/:pet_id
+
