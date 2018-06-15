@@ -12,7 +12,7 @@ Esta api se construyo utilizando:
 Descargar el repositorio, entrar al directorio en donde este instalado y ejecutar:
 
 ```sh
-$ yarn install
+$ yarn install --save-dev
 $ brew install mongodb
 $ brew cask install robo-3t
 ```
@@ -49,7 +49,7 @@ Dentro del interprete, escribimos:
 Ahora, podemos correr el api mediante node o con nodemon. Si deseamos usar node, hay que hacer:
 
 ```sh
-$ node index.js
+$ npm start
 ```
 
 Si preferimos nodemon:
@@ -88,4 +88,12 @@ PUT /pets/:pet_id
 ```
 
 DELETE /pets/:pet_id
+
+# Testing
+
+Para correr las pruebas, solo hay que ejecutar:
+
+```
+$ npm test
+```
 

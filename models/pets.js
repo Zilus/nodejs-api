@@ -12,8 +12,7 @@ const PetSchema = new mongoose.Schema(
 			type: String,
 			required: false,
 		},
-	},
-	{ minimize: false },
+	}
 );
 
 PetSchema.plugin(timestamps);

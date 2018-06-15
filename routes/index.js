@@ -8,9 +8,26 @@ const errors = require('restify-errors');
  */
 const Pet = require('../models/pets');
 
-module.exports = function(server) {
+module.exports = function(server) {	
 
 	/**
+	 * LIST
+	 */
+	server.get('/pets', (req, res, next) => {
+		Pet.apiQuery(req.params, function(err, docs) {
+			if (err) {
+				console.error(err);
+				return next(
+					new errors.InvalidContentError(err.errors.name.message),
+				);
+			}
+
+			res.send(docs);
+			next();
+		});
+    });
+    
+    /**
 	 * POST
 	 */
 	server.post('/pets', (req, res, next) => {
@@ -31,23 +48,6 @@ module.exports = function(server) {
 			}
 
 			res.send(201);
-			next();
-		});
-	});
-
-	/**
-	 * LIST
-	 */
-	server.get('/pets', (req, res, next) => {
-		Pet.apiQuery(req.params, function(err, docs) {
-			if (err) {
-				console.error(err);
-				return next(
-					new errors.InvalidContentError(err.errors.name.message),
-				);
-			}
-
-			res.send(docs);
 			next();
 		});
 	});
