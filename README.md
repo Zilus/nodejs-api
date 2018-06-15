@@ -1,33 +1,62 @@
 # nodejs-api
 Proyecto para Kazam
 
+Esta api se construyo utilizando:
+
+    - Node.js
+    - MongoDB
+    - Mongoose
+    - Restify
+    
+# Instalación
+Descargar el repositorio, entrar al directorio en donde este instalado y ejecutar:
+
+```sh
 $ npm install
-
 $ brew install mongodb
-
 $ brew cask install robo-3t
+```
 
+Ahora necesitamos crear un directorio para nuestra base de datos y ejecutar mongodb: 
+
+```sh
 $ sudo mkdir -p /data/db
-
 $ sudo chown -R `id -un` /data/db
+```
 
+Ahora, podemos abrir una terminar y mandar mongo a segundo plano o dejarlo corrriendo y salir con ctrl-c.
 Abrir una terminal y correr:
 
+```sh
 $ mongod
-
-Para sair: ctrl-c
-
+```
 
 Configuramos mongo para usar API
 
-$ mongo 
+```sh
+$ mongo
+```
 
 Dentro del interprete, escribimos:
 
+```sh
 > use api
-
 > exit
+```
 
+# Iniciar
+
+Ahora, podemos correr el api mediante node o con nodemon. Si deseamos usar node, hay que hacer:
+
+```sh
+$ node index.js
+```
+
+Si preferimos nodemon:
+```sh
 $ npm install -g nodemon
-
 $ nodemon
+```
+
+# Postman
+
