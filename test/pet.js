@@ -1,4 +1,3 @@
-let mongoose = require("mongoose");
 let Pet = require('../models/pets');
 let url = "http://localhost:3000";
 //Require the dev-dependencies

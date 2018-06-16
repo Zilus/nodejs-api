@@ -104,10 +104,7 @@ Descargar Postman:
 [Sitio oficial](https://www.getpostman.com/app/download/osx64)
 
 # Rutas
-GET /pets
-GET /pets/:id
-
-POST /pets (nueva mascota)
+POST /pets (nueva mascota). Se recomienda crear algunos registros.
 ```json
 {
 	"name": "Tatemon",
@@ -115,8 +112,13 @@ POST /pets (nueva mascota)
 }
 ```
 
+GET /pets
 
-### No estaba en el ejercicio pero tambien funciona:
+GET /pets/:id
+
+
+
+## No estaba en el ejercicio pero tambien funciona:
 
 PUT /pets/:pet_id 
 
@@ -136,4 +138,10 @@ Para correr las pruebas, solo hay que ejecutar:
 ```
 $ npm test
 ```
+
+Las pruebas consisten:
+1) StandardJS:
+[Sitio oficial](https://standardjs.com)
+
+2) Mocha + CHAI para los endpoints del API
 
