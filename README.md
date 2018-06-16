@@ -143,5 +143,7 @@ Las pruebas consisten:
 1) StandardJS:
 [Sitio oficial](https://standardjs.com)
 
-2) Mocha + CHAI para los endpoints del API
+2) Instanbul para el test covergae
+
+3) Mocha + CHAI para los endpoints del API
 
