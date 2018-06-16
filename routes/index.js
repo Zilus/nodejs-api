@@ -16,7 +16,6 @@ module.exports = function(server) {
 	server.get('/pets', (req, res, next) => {
 		Pet.apiQuery(req.params, function(err, docs) {
 			if (err) {
-				console.error(err);
 				return next(
 					new errors.InvalidContentError(err.errors.name.message),
 				);
@@ -42,7 +41,6 @@ module.exports = function(server) {
 		let pet = new Pet(data);
 		pet.save(function(err) {
 			if (err) {
-				console.error(err);
 				return next(new errors.InternalError(err.message));
 				next();
 			}
@@ -58,7 +56,6 @@ module.exports = function(server) {
 	server.get('/pets/:pet_id', (req, res, next) => {
 		Pet.findOne({ _id: req.params.pet_id }, function(err, doc) {
 			if (err) {
-				console.error(err);
 				return next(
 					new errors.InvalidContentError(err.errors.name.message),
 				);
@@ -87,7 +84,6 @@ module.exports = function(server) {
 
 		Pet.findOne({ _id: req.params.pet_id }, function(err, doc) {
 			if (err) {
-				console.error(err);
 				return next(
 					new errors.InvalidContentError(err.errors.name.message),
 				);
@@ -101,7 +97,6 @@ module.exports = function(server) {
 
 			Pet.update({ _id: data._id }, data, function(err) {
 				if (err) {
-					console.error(err);
 					return next(
 						new errors.InvalidContentError(err.errors.name.message),
 					);
@@ -119,7 +114,6 @@ module.exports = function(server) {
 	server.del('/pets/:pet_id', (req, res, next) => {
 		Pet.remove({ _id: req.params.pet_id }, function(err) {
 			if (err) {
-				console.error(err);
 				return next(
 					new errors.InvalidContentError(err.errors.name.message),
 				);

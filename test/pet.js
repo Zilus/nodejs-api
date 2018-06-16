@@ -84,9 +84,7 @@ describe('Pets', () => {
                     .send({
                         name: "Laika 2"
                     })
-                    .end((err, res) => {
-                        console.log(res.body);
-                        
+                    .end((err, res) => {                        
                         res.should.have.status(200);
                         res.body.should.be.a('object');
                         res.body.should.have.property('name').eql('Laika 2');
