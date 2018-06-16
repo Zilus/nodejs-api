@@ -8,7 +8,47 @@ Esta api se construyo utilizando:
     - Mongoose
     - Restify
     
-# Instalación
+# Requisitos previos
+
+Node, de preferencia la version 8.11.3 que es LTS
+Para instalarla, usaremos NVM.
+
+```
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+```
+
+Cerramos y abrimos nuestra terminal. Si preferimos no cerrarla, podemos ejecutr lo siguiente:
+
+``` 
+$ export NVM_DIR="$HOME/.nvm"
+$ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+$ [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+Verificamos la instalación con:
+
+```
+$ command -v nvm
+```
+
+Ahora instalamos Node.js v8.11.3
+
+```
+$ nvm install v8.11.3
+```
+Solo por buena practiva, le decimos a NVM que sera nuestra version de Node por defecto:
+
+```
+$ nvm alias default v8.11.3
+```
+
+Verificamos:
+
+```
+$ node -v
+```
+
+# Instalación del proyecto
 Descargar el repositorio, entrar al directorio en donde este instalado y ejecutar:
 
 ```sh
